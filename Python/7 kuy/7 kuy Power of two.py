@@ -1,4 +1,31 @@
 '''
+a power of two is a number of the form 2n where n is an integer, i.e. the result of exponentiation with number two as the base and integer n as the exponent.
+
+You may assume the input is always valid.
+
+Examples
+power_of_two(1024) ==> True
+power_of_two(4096) ==> True
+power_of_two(333)  ==> False
+Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
+'''
+
+
+
+def power_of_two(x):
+    return x != 0 and ((x & (x - 1)) == 0)
+
+def test_power_of_two():
+    assert power_of_two(1024) is True
+    assert power_of_two(4096) is True
+    assert power_of_two(27) is False
+    print("All tests passed!")
+
+
+test_power_of_two()
+
+
+'''
 If `x` is a power of two, its binary representation will have only one bit set to 1,
 and all other bits will be 0. For example, the number 8 is a power of two,
 and its binary representation is `1000`. When we subtract 1 from `x`, we get a number
