@@ -24,7 +24,6 @@ skill_overestimation: The computed difference between a user's perceived and act
 overconfidence_category: categorization of overconfidence, as described above
 The query should order the result first by skill overestimation in descending order, and in the case of a tie, by user id in descending order.*/
 
-Here is an SQL query that should meet the requirements you specified:
 
 
 SELECT id,
