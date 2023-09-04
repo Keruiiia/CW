@@ -21,3 +21,5 @@ def test_sum_of_n():
     assert sum_of_n(-4) ==[0, -1, -3, -6, -10]
     assert sum_of_n(1) == [0, 1]
 	print("All tests passed")
+	
+test_sum_of_n()

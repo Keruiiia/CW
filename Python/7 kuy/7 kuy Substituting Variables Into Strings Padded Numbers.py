@@ -15,3 +15,5 @@ def test_solution():
     assert solution(109) == 'Value is 00109'
     assert solution(1204) == 'Value is 01204'
 	print("All tests passed")
+	
+test_solution()
