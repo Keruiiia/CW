@@ -14,8 +14,25 @@ Note 2: do not modify the input array.
 
 def beggars(values, n):
     if n > len(values):
-        return values.extend([0] * len(values) - n)
+        values.extend([0] * (n - len(values)))
+        return values
     elif n == 0:
         return []
     else:
-        return [sum(values[j] for j in range(i, len(values), i)) for i in range(1, n+1)]
+        return [sum(values[j] for j in range(i, len(values), n)) for i in range(n)]
+		
+# smart solution
+
+def beggars(values, n):
+    return [sum(values[i::n]) for i in range(n)]
+	
+def test_beggars():
+	assert beggars([1,2,3,4,5],1) == [15]
+	assert beggars([1,2,3,4,5],2) == [9,6]
+	assert beggars([1,2,3,4,5],3) == [5,7,3]
+	assert beggars([1,2,3,4,5],6) == [1,2,3,4,5,0]
+	assert beggars([1,2,3,4,5],0) == []
+	print("All tests passed!")
+	
+	
+test_beggars()
