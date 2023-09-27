@@ -8,3 +8,7 @@ the speak method to return the cats name + meows. e.g. 'Mr Whiskers meows.'
 The name attribute is passed with this.name (JS), @name (Ruby) or self.name (Python).
 '''
 
+class Cat(Animal):
+
+    def speak(self):
+        return f'{self.name} meows.'
