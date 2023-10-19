@@ -12,3 +12,8 @@ Example:
 "7"        -> false
 Try to avoid using the % (modulo) operator.
 '''
+
+def divisible_by_three(st): 
+    while len(st) != 1:
+        st = str(sum(int(n) for n in st))
+    return int(st) in [0, 3, 6, 9]
