@@ -22,3 +22,12 @@ The digit frequencies are:
 etc...
 and so the method would return [1,9,6,3,0,1,1,1,1,1]
 '''
+
+def paint_letterboxes(start, finish):
+    s = ""
+    for num in range(start, finish + 1):
+        s += str(num)
+    d = {}
+    for i in range(10):
+        d[i] = s.count(str(i))
+    return list(d.values())
