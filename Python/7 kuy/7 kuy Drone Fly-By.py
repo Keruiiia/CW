@@ -10,3 +10,7 @@ Anywhere the drone has flown, including its current position, will result in the
 Return the resulting lamps string. See example tests for more clarity.
 '''
 
+def fly_by(lamps, drone):
+    return lamps.replace('x', 'o', len(drone))
+	
+	
