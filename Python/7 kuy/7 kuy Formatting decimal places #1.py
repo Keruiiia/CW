@@ -13,3 +13,11 @@ Incorrect examples (e.g. if you round the numbers):
 14.3286 is 14.33
 '''
 
+def two_decimal_places(number):
+    lst = str(number).split(".")
+    lst[1] = lst[1][:2]
+    return float(".".join(lst))
+
+#smart solution 
+def two_decimal_places(number):
+    return int (number * 100) / 100.0
