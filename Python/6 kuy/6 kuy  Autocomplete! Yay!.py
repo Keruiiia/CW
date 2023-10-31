@@ -21,3 +21,14 @@ For example, an input of "$%^" should be treated as "" and an input of
 
 (Thanks to wthit56 for the suggestion!)
 '''
+
+import re
+
+def autocomplete(input_, dictionary):
+    s = re.sub('[^a-zA-z]', '', input_).capitalize()
+    len_sub, lst = len(s), []
+    for word in dictionary:
+        if word[:len_sub].capitalize() == s:
+            lst.append(word)
+    return lst[:5]
+	
