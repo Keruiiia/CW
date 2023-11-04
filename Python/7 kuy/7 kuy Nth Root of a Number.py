@@ -9,3 +9,7 @@ x = 9     n = 2  -->  3    # the square root of 9 is 3     3^2 = 9
 x = 6.25  n = 2  -->  2.5  #                             2.5^2 = 6.25
 '''
 
+from math import pow
+
+def root(x, n):
+    return pow(x, 1/n)
