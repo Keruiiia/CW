@@ -8,3 +8,8 @@ number_to_pwr(2, 3)  # -> 8 ( = 2 * 2 * 2 )
 number_to_pwr(10, 6) # -> 1000000
 '''
 
+def number_to_pwr(number, p): 
+    res = 1
+    for i in range(p):
+        res *= number
+    return res
