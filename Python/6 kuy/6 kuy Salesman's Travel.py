@@ -32,4 +32,36 @@ import re
 def travel(r, zipcode):
     pattern = r'[A-Z]{2} \d{5}'
     flag = bool(re.search(pattern, zipcode))
-    return flag
+    lst = r.split(",")
+    if flag and zipcode not in r:
+        f"{zipcode}:/"
+    elif flag:
+        lst = [address for address in lst if zipcode in address]
+        streets = []
+        numbers = []
+        zipcode = None
+
+        for address in lst:
+            match = re.search(r'(\d+) (.*) ([A-Z]{2} \d{5})', address)
+            if match:
+                numbers.append(match.group(1))
+                streets.append(match.group(2))
+                if zipcode is None:
+                    zipcode = match.group(3)
+
+        return f"{zipcode}:{','.join(streets)}/{','.join(numbers)}"
+
+    return f"{zipcode}:/"
+	
+	
+#smart solution
+
+def travel(r, zipcode):
+    streets = []
+    nums = []
+    addresses = r.split(',')
+    for address in addresses:
+        if ' '.join(address.split()[-2:]) == zipcode:
+            streets.append(' '.join(address.split()[1:-2]))
+            nums += address.split()[:1]
+    return '{}:{}/{}'.format(zipcode, ','.join(streets), ','.join(nums))
