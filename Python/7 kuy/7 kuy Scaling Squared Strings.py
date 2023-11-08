@@ -13,3 +13,6 @@ A v-vertical scaling of a string consists of replicating v times each part of th
 Example: 2-vertical scaling of s: => "abcd\nabcd\nefgh\nefgh\nijkl\nijkl\nmnop\nmnop"
 Function scale(strng, k, v) will perform a k-horizontal scaling and a v-vertical scaling.
 '''
+
+def scale(strng, k, v):
+    pass
