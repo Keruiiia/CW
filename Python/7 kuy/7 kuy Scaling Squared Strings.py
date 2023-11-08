@@ -15,4 +15,10 @@ Function scale(strng, k, v) will perform a k-horizontal scaling and a v-vertical
 '''
 
 def scale(strng, k, v):
-    pass
+    lst = strng.split("\n")
+    for i, word in enumerate(lst):
+        s = ""
+        for char in word:
+            s += char * k
+        lst[i] = s
+    return lst
