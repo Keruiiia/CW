@@ -12,3 +12,10 @@ Complete the function which tests if a positive integer n is Harshad number,
 and returns True if the product of its digit sum and its digit sum reversed equals n; otherwise return False
 '''
 
+def number_joy(n):
+    s = 0
+    for char in str(n):
+        s += int(char)
+    return n == (s * int(str(s)[::-1]))
+	
+
