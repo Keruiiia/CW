@@ -11,3 +11,10 @@ id
 name
 age
 '''
+
+CREATE FUNCTION agecalculator(age DATE)
+RETURNS INT AS $$
+BEGIN
+  RETURN DATE_PART('YEAR', AGE(age) );
+END; $$
+LANGUAGE plpgsql;
