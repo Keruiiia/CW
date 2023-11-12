@@ -34,5 +34,14 @@ SELECT
 	bottom_half.legs,
 	bottom_half.tails,
 	CASE
-		WHEN 
+		WHEN top_half.heads > top_half.arms OR bottom_half.tails > bottom_half.legs THEN 'BEAST'
+		ELSE 'WEIRDO'
+	END as species
+FROM top_half INNER JOIN bottom_half USING(id); 
+		
+		
+-- If the monster has more heads than arms, more tails than legs, or both, it is a
+--'BEAST' else it is a 'WEIRDO'. This needs to be captured in the species column.		
+		
+		
 	
