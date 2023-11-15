@@ -14,3 +14,13 @@ Task
 The function new_avg(arr, navg) should return the expected donation
 (rounded up to the next integer) that will permit to reach the average navg.
 '''
+
+from math import ceil
+
+
+def new_avg(arr, newavg):
+    value = int(ceil((len(arr)+1) * newavg - sum(arr)))
+    if value < 0:
+        raise ValueError
+    
+    return value
