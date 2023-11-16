@@ -18,3 +18,16 @@ This_is_an_otherExample.mpg
 
 myFile.tar
 '''
+
+class FileNameExtractor:
+    @staticmethod
+    def extract_file_name(dirty_file_name):
+        lst = dirty_file_name.split('.')
+        s = ''
+        for char in lst[0]:
+            if char.isdigit():
+                continue
+            s += char
+        return '.'.join([s[1:], lst[1]])
+		
+		
