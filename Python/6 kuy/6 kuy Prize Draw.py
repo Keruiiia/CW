@@ -28,3 +28,20 @@ n: 4
 
 The function should return: "PauL"
 '''
+
+def rank(st, we, n):
+    if not st:
+        return "No participants"
+    
+    names = st.split(',')
+    if n > len(names):
+        return "Not enough participants"
+    
+    scores = []
+    for i, name in enumerate(names):
+        score = sum((ord(c) - 64) for c in name.upper()) + len(name)
+        scores.append((score * we[i], name))
+    
+    scores.sort(key=lambda x: (-x[0], x[1]))
+    
+    return scores[n-1][1]
