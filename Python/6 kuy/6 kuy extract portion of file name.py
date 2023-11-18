@@ -30,4 +30,7 @@ class FileNameExtractor:
             s += char
         return '.'.join([s[1:], lst[1]])
 		
-		
+#smart_solution
+
+def extract_file_name(fname):
+    return fname.split('_', 1)[1].rsplit('.', 1)[0]
