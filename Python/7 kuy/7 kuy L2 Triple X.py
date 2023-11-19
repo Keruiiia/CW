@@ -11,3 +11,16 @@ capital X's do not count as an occurrence of "x".
 if there are no "x"'s then return false
 '''
 
+def triple_x(s):
+    try:
+        return s.index('x') == s.index('xxx')
+    except:
+        return False
+		
+
+#smart solution
+
+import re
+
+def triple_x(s):
+    return re.match('[^x]*xxx', s) is not None
