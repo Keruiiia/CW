@@ -6,3 +6,8 @@ Example:
 * With input "The quick brown fox jumps over the lazy dog", 4
 * Return ['quick', 'brown', 'jumps']
 '''
+
+def filter_long_words(sentence, n):
+    return list(filter(lambda word: len(word) > n, sentence.split()))
+	
+
