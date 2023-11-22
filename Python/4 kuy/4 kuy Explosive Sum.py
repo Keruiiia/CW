@@ -26,3 +26,10 @@ exp_sum(50) # 204226
 exp_sum(80) # 15796476
 exp_sum(100) # 190569292
 '''
+
+def exp_sum(n):
+    if n < 0: return 0
+    A = [1] + [0]*n
+    for i in range(n):
+        A = [sum(A[:k+1][::-i-1]) for k in range(n+1)]
+    return A[-1]
