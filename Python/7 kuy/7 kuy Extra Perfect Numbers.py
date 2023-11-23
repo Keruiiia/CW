@@ -25,3 +25,6 @@ First and last bits as set bits.
 (7)10 = (111)2
 First and last bits as set bits.
 '''
+
+def extra_perfect(n: int) -> list[int] :
+    return list(range(1,n+1,2))
