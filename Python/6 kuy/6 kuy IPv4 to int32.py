@@ -15,3 +15,23 @@ Example
 "128.32.10.1" => 2149583361
 '''
 
+def ip_to_int32(ip):
+    nums = [bin(int(part))[2:].zfill(8) for part in ip.split('.')]
+    return int(''.join(nums), 2)
+	
+	
+#smart_solution
+
+def ip_to_int32(ip):
+    addr = ip.split(".")
+    res = int(addr[0]) << 24
+    res += int(addr[1]) << 16
+    res += int(addr[2]) << 8
+    res += int(addr[3])
+    return res
+	
+def ip_to_int32(ip):
+    r =""
+    for i in ip.split('.'):
+        r += "{0:08b}".format(int(i))
+    return int(r, 2)
