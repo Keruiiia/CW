@@ -23,3 +23,8 @@ group = {
 split_the_bill(group) # returns {'A': 5, 'B': 0, 'C': -5}
 '''
 
+def split_the_bill(x):
+    s = round(sum(x.values()) / len(x.values()), 2)
+    for k in x:
+        x[k] = round(x[k] - s, 2)
+    return x
