@@ -9,3 +9,6 @@ greet("")    --> None # Return None if input is empty string
 greet(None)  --> None # Return None if input is None
 '''
 
+def greet(name):
+    if name:
+        return f"hello {name}!"
