@@ -15,3 +15,5 @@ You have to use the filter-method which returns each element of the array for wh
 https://docs.python.org/3/library/functions.html#filter
 '''
 
+def search_names(logins):
+    return list(filter(lambda a: a[0].endswith('_'), logins))
