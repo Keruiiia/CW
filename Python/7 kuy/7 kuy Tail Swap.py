@@ -8,3 +8,16 @@ Examples
 ["a:12345", "777:xyz"]  -->  ["a:xyz", "777:12345"]
 '''
 
+def tail_swap(strings):
+    f, s = [], []
+    for st in strings:
+        first, second = st.split(':')
+        f.append(first)
+        s.append(second)
+    return [':'.join([fe, se]) for fe, se in zip(f, s[::-1])]
+	
+#smart_solution
+
+def tail_swap(strings):
+    (h1, t1), (h2, t2) = (s.split(':') for s in strings)
+    return [f"{h1}:{t2}", f"{h2}:{t1}"]
