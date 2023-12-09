@@ -6,3 +6,5 @@ full of textbooks by subject, so he can study before the test.
 The sorting should NOT be case sensitive
 '''
 
+def sorter(textbooks):
+    return sorted(textbooks,key=str.lower)
