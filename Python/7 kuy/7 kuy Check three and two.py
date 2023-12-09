@@ -8,3 +8,8 @@ Examples
 ["a", "a", "a", "a", "a"] ==> false // 5x "a"
 '''
 
+from collections import Counter
+
+def check_three_and_two(array):
+    res = list(Counter(array).values())
+    return res == [3, 2] or res == [2, 3]
