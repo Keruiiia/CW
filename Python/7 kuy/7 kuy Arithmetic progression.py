@@ -10,3 +10,14 @@ Example
 arithmetic_sequence_elements(1, 2, 5) == "1, 3, 5, 7, 9"
 '''
 
+def arithmetic_sequence_elements(a, d, n):
+    res = [a]
+    while len(res) != n:
+        res.append(a + d)
+        a += d
+    return ', '.join(map(str, res))
+	
+
+#smart_solution
+def arithmetic_sequence_elements(a, r, n):
+    return ", ".join((str(a+r*i) for i in range(n)))
