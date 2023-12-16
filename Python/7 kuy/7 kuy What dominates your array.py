@@ -7,3 +7,11 @@ Write a function dominator(arr) that, given a zero-indexed array arr consisting
 of n integers, returns the dominator of arr. The function should return −1 if array does not have a dominator. All values in arr will be >=0.
 '''
 
+from collections import Counter
+
+
+def dominator(arr):
+    if not arr:
+        return -1
+    k, v = Counter(arr).most_common(1)[0]
+    return k if v > len(arr) / 2 else -1
