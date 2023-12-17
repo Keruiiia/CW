@@ -19,3 +19,10 @@ with [no clan specified], you must sum the total_points for each clan and the to
 ##Note The data is loaded from the live leaderboard, this means values will change
 but also could cause the kata to time out retreiving the information.
 */
+SELECT
+  RANK() OVER (ORDER BY SUM(points) DESC) AS rank,
+  COALESCE(NULLIF(clan,''), '[no clan specified]') AS clan,
+  SUM(points) AS total_points,
+  COUNT(name) AS total_people
+FROM people
+GROUP BY clan
