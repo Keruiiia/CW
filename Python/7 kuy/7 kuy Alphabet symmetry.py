@@ -8,3 +8,6 @@ their positions in the alphabet for each word.
 
 solve(["abode","ABc","xyzD"]) = [4, 3, 1]
 '''
+
+def solve(arr):
+    return [ sum(c == chr(97+i) for i,c in enumerate(w[:26].lower())) for w in arr ]
