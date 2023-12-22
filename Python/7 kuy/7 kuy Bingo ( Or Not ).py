@@ -7,3 +7,6 @@ Write a function where you will win the game if your numbers can spell "BINGO".
 They do not need to be in the right order in the input array. Otherwise you will lose.
 Your outputs should be "WIN" or "LOSE" respectively.
 '''
+def bingo(array): 
+    arr = set([chr(num + 96) for num in array])
+    return ('LOSE', 'WIN')[arr >= set('bingo')]
