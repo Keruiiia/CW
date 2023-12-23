@@ -39,3 +39,20 @@ film_id | title                             | length |
    14   | Monty Python and the Holy Grail   | 41     |
 */
 
+with per as (
+SELECT
+    PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY length) AS Disc_50th
+FROM film
+where rating = 'PG-13'
+),
+mi as (select min(length) as min_length
+from film
+where rating = 'R'
+)
+select film_id,
+       title,
+       length
+from film
+where length < (select min_length from mi)
+      or length > (select Disc_50th from per)
+order by 3, 2, 1;
