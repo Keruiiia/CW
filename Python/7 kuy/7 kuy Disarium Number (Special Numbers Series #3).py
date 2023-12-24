@@ -7,3 +7,10 @@ disariumNumber(564) ==> return "Not !!"
 Explanation:
 Since , 51 + 62 + 43 = 105 != 564 , thus output is "Not !!"
 '''
+
+def disarium_number(n):
+    res = enumerate(map(int, list(str(n))), 1)
+    r = 0
+    for i, num in res:
+        r += num ** i
+    return ('Not !!', 'Disarium !!')[r == n]
