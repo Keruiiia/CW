@@ -8,3 +8,8 @@ Heron's formula:
 
 Output should have 2 digits precision.
 '''
+
+def heron(a, b, c):
+    s = (a + b + c) / 2
+    res = round((s*(s-a)*(s-b)*(s-c))**0.5, 2)
+    return res
