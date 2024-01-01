@@ -9,3 +9,6 @@ Characters can be in the range from "00000000" to "11111111" (inclusive)
 
 Note: In the case of an empty binary string your function should return an empty string.
 '''
+
+def binary_to_string(binary):
+    return ''.join([chr(int(binary[i: i+8], 2)) for i in range(0, len(binary), 8)])
