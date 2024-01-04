@@ -21,3 +21,6 @@ i to the power of a given non-negative integer in its simplest form, as a string
 �
 i).
 '''
+
+def pofi(n):
+    return ['1', 'i', '-1', '-i'][n % 4]
