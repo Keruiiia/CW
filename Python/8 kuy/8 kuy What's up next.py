@@ -8,3 +8,9 @@ undefined in JavaScript, None in Python.
 next_item([1, 2, 3, 4, 5, 6, 7], 3) # => 4
 next_item(['Joe', 'Bob', 'Sally'], 'Bob') # => "Sally"
 '''
+def next_item(xs, item):
+    it = iter(xs)
+    for x in it:
+        if x == item:
+            break
+    return next(it, None)
