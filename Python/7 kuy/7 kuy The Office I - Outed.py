@@ -9,3 +9,7 @@ Happiness rating will be total score / number of people in the room.
 
 Note that your boss is in the room (boss), their score is worth double it's face value (but they are still just one person!)
 '''
+
+def outed(meet, boss):
+    res = (sum(meet.values()) + meet[boss] ) / len(meet)
+    return ('Get Out Now!', 'Nice Work Champ!')[res > 5]
