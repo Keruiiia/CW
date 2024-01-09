@@ -13,3 +13,7 @@ and should return, either a proc or a lambda. Remember that the resulting compos
 compose(f , g)(x)
 => f( g( x ) )
 '''
+def compose(f,g):
+    def z(*arg,**kw):
+      return f(g(*arg,**kw))
+    return z
