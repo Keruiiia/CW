@@ -22,3 +22,13 @@ pattern(10): should return the following:
 1********9
 1*********10
 '''
+def pattern(n):
+    res = '1\n'
+    for i in range(2, n+1):
+        res += '1' + (i-1) * '*' + f'{i}' + '\n'
+    return res[:-1]
+	
+#smart_solution
+
+def pattern(n):
+    return "\n1".join("*" * i + str(i + 1) for i in range(n))
