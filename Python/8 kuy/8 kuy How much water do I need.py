@@ -9,3 +9,9 @@ My washing machine is an old model that can only handle double the amount of loa
 
 The answer should be rounded to the nearest 2 decimal places.
 '''
+def how_much_water(L, X, N):
+    if N > 2 * X:
+        return 'Too much clothes'
+    if N < X:
+        return 'Not enough clothes'
+    return round(1.1 ** (N-X) * L, 2)
