@@ -13,3 +13,6 @@ Examples
 "!???!!"    --->   9
 "!????!!!?" --->  20
 '''
+
+def product(st):
+    return st.count('!') * st.count('?')
