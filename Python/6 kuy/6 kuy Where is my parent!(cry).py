@@ -22,7 +22,7 @@ def find_children(dancing_brigade):
     lst.sort(key=lambda tup: (tup[1], tup[0]))
     return ''.join(tup[0] for tup in lst)
 	
+	
 # smart solution
-
 def find_children(s):
     return ''.join(sorted(s, key=lambda c: (c.lower(), c)))
