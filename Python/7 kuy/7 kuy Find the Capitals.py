@@ -7,3 +7,13 @@ Examples
 [{'state': 'Maine', 'capital': 'Augusta'}] --> ["The capital of Maine is Augusta"]
 [{'country' : 'Spain', 'capital' : 'Madrid'}] --> ["The capital of Spain is Madrid"]
 '''
+def capital(capitals): 
+    res = []
+    for d in capitals:
+        country, capital = d.values()
+        res.append(f"The capital of {country} is {capital}")
+    return res
+	
+
+def capital(capitals):
+    return ["The capital of {} is {}".format(*x.values()) for x in capitals]
