@@ -6,3 +6,6 @@ For example:
 bubba = Python('Bubba')
 bubba.name # should return 'Bubba'
 '''
+class Python:
+    def __init__(self, name):
+        self.name = name
