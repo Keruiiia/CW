@@ -11,3 +11,15 @@ Example:
 
 "!?..A" --> 1
 '''
+
+def count_letters_and_digits(s):
+    res = 0
+    for char in s:
+        if char.isalpha() or char.isdigit():
+            res += 1
+    return res
+	
+#smart_solution
+
+def count_letters_and_digits(s):
+    return sum(map(str.isalnum, s))
