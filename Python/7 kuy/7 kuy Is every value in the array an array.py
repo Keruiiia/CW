@@ -9,3 +9,5 @@ Examples:
 ['1','2'] => false
 [{1:1},{2:2}] => false
 '''
+def arr_check(arr):
+    return all(type(el) == list for el in arr)
