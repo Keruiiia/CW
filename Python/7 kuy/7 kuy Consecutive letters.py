@@ -11,6 +11,14 @@ solve("abbc") = False, because b does not occur once.
 solve("v") = True
 All inputs will be lowercase letters.
 '''
+
 def solve(st):
+    if len(st) == 1:
+        return True
+    al = 'abcdefghijklmnopqrstuvwxyz'
     st = ''.join(sorted(st))
-    return st
+    first, last = st[0], st[-1]
+    ind_f, ind_l = al.index(first), al.index(last)
+    return st == al[ind_f:ind_l + 1]
+	
+#smart_solution
