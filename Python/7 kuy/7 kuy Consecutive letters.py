@@ -11,3 +11,6 @@ solve("abbc") = False, because b does not occur once.
 solve("v") = True
 All inputs will be lowercase letters.
 '''
+def solve(st):
+    st = ''.join(sorted(st))
+    return st
