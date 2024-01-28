@@ -22,3 +22,5 @@ def solve(st):
     return st == al[ind_f:ind_l + 1]
 	
 #smart_solution
+def solve(s):
+    return len(s) == ord(max(s)) - ord(min(s)) + 1
