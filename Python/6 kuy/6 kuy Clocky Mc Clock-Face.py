@@ -33,3 +33,12 @@ Do not make any AM or PM assumptions for the HH:MM result. They are indistinguis
 7 minutes past noon is also 12:07
 '''
 
+from math import floor
+
+def what_time_is_it(angle):
+    min = floor(angle * 720 / 360)
+    h, m = min // 60, min % 60
+    if h == 0:
+        h = 12
+    return f'{h:02}:{m:02}'
+	
