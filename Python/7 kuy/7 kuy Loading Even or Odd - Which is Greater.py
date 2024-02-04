@@ -7,3 +7,27 @@ If the sum of odd numbers is greater than the sum of even numbers return Odd is 
 
 If the total of both even and odd numbers are identical return Even and Odd are the same
 '''
+
+def even_or_odd(s):
+    even, odd = 0, 0
+    for num in s:
+        n = int(num)
+        if n & 1:
+            odd += n
+        else:
+            even += n
+    if even > odd:
+        return 'Even is greater than Odd'
+    elif odd > even:
+        return 'Odd is greater than Even'
+    else:
+        return 'Even and Odd are the same'
+		
+def even_or_odd(s):    
+    even_minus_odd = sum([-x if x % 2 else x for x in map(int, s)])
+    if even_minus_odd > 0:
+        return "Even is greater than Odd"
+    elif even_minus_odd < 0:
+        return "Odd is greater than Even"
+    else:
+        return "Even and Odd are the same"
