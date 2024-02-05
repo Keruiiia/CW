@@ -7,3 +7,6 @@ unscrambleEggs("Beggegeggineggneggeregg"); => "Beginner"
 Kata is supposed to be for beginners to practice regular expressions, so commenting would be appreciated.
 '''
 
+def unscramble_eggs(word):
+    word = word.replace("egg", "")
+    return word
