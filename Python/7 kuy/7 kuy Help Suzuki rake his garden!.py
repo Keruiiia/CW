@@ -14,3 +14,6 @@ Returns a string with all items except a rock or gravel replaced with gravel:
 garden = 'gravel gravel rock gravel gravel gravel gravel gravel gravel gravel'
 '''
 
+def rake_garden(garden):
+    s = ' '.join('gravel' if word != 'rock' else word for word in garden.split())
+    return s
