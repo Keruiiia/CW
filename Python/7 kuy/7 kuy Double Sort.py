@@ -8,3 +8,14 @@ followed by the strings sorted in alphabetic order. The values must maintain the
 Note that numbers written as strings are strings and must be sorted with the other strings.
 '''
 
+def db_sort(arr): 
+    nums, words = [], []
+    for el in arr:
+        if type(el) == int:
+            nums.append(el)
+        else:
+            words.append(el)
+    return sorted(nums) + sorted(words)
+	
+def db_sort(arr): 
+    return sorted(arr, key=lambda x: (isinstance(x,str),x))
