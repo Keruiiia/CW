@@ -10,3 +10,8 @@ number = 88 => returns false -> 8 + 8 = 16 -> 1 + 6 = 7 => 7 is odd
 
 number = 222 => returns true -> 2 + 2 + 2 = 6 => 6 is even
 '''
+
+def is_very_even_number(n):
+    return n == 0 or (n - 1) % 9 % 2
+	
+	
