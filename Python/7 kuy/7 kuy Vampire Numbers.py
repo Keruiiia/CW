@@ -10,3 +10,7 @@ Our loose definition of Vampire Numbers can be described as follows:
 # multiplicands, but only two 1's in the product
 Create a function that can receive two 'fangs' and determine if the product of the two is a valid vampire number.
 '''
+
+def vampire_test(x, y):
+    mul = x * y
+    return sorted(str(mul)) == sorted(str(x) + str(y))
