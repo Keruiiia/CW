@@ -21,3 +21,6 @@ examples:
 for n = 4, there is neither n - 1 = 3 nor n + 1 = 5
 Write a function named isNice/IsNice that returns true if its array argument is a Nice array, else false. An empty array is not considered nice.
 '''
+def is_nice(arr):
+    s = set(arr)
+    return bool(arr) and all( n+1 in s or n-1 in s for n in s)
