@@ -9,3 +9,7 @@ Example
 
 modify_multiply ("This is a string", 3 ,5)
 '''
+
+def modify_multiply(st, loc, num):
+    lst = [st.split()[loc]] * num
+    return '-'.join(lst)
