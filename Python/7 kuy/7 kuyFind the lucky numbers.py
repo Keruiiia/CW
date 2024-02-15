@@ -8,3 +8,10 @@ ghci> filterLucky [1,2,3,4,5,6,7,68,69,70,15,17]
 Don't worry about bad input, you will always receive a finite list of integers.
 '''
 
+def filter_lucky(lst):
+    res = []
+    for num in lst:
+        if '7' in str(num):
+            res.append(num)
+    return res
+	
