@@ -15,3 +15,5 @@ def filter_lucky(lst):
             res.append(num)
     return res
 	
+def filter_lucky(lst):
+    return list(filter(lambda k: '7' in str(k), lst))
