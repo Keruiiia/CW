@@ -10,3 +10,5 @@ Example 1: Input: {1, 2}, {3, 4}, 15 --> Output: 5
 Example 2: Input: {3, 1, 2}, {4, 5}, 21 --> Output: 6
 '''
 
+def lost_sheep(friday,saturday,total):
+    return total - sum(friday + saturday)
