@@ -10,3 +10,7 @@ full_text = "aa_bb_cc_dd_bb_e", search_text = "bb"
 full_text = "aaabbbcccc", search_text = "bbb"
     ---> should return 1
 '''
+def solution(full_text, search_text):
+    s = full_text.count(search_text)
+    return s
+	
