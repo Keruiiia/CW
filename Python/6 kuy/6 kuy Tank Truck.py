@@ -30,3 +30,8 @@ def tankvol(h, d, vt):
     vol_remain = ratio * vt
     # return the truncated result
     return int(vol_remain)
+
+def tankvol(h, d, vt):
+    theta = acos((d - 2*h) / d)
+    proportion = (theta - 0.5*sin(2*theta)) / pi
+    return int(proportion * vt)
