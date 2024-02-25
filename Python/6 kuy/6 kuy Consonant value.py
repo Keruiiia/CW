@@ -19,3 +19,8 @@ def solve(s):
     lst = [sum(ord(c) - 96 for c in char) for char in s.split()]
     return max(lst)
 	
+import re
+
+def solve(s):
+    return max(sum(ord(c)-96 for c in subs) for subs in re.split('[aeiou]+', s))
+	
