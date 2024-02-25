@@ -14,3 +14,5 @@ For the word "strength", solve("strength") = 57
 For C: do not mutate input.
 '''
 
+def solve(s):
+    pass
