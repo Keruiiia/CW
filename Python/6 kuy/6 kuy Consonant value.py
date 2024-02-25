@@ -15,4 +15,7 @@ For C: do not mutate input.
 '''
 
 def solve(s):
-    pass
+    s = ''.join(char if char not in 'aeiou' else ' ' for char in s)
+    lst = [sum(ord(c) - 96 for c in char) for char in s.split()]
+    return max(lst)
+	
