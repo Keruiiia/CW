@@ -11,3 +11,12 @@ Examples
 If the string to search for is "me", and the array to search is ["home", "milk", "Mercury", "fish"], the method should return ["home", "Mercury"].
 '''
 
+def word_search(query, seq):
+    lst = [word for word in seq if query.lower() in word.lower()]
+    if len(lst) > 0:
+        return lst
+    else:
+        return ['None']
+		
+def word_search(query, seq):
+    return [x for x in seq if query.lower() in x.lower()] or ["None"]
