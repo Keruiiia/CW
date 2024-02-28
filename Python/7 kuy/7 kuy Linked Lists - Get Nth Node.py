@@ -19,3 +19,4 @@ def get_nth(node, index, i=0):
         raise IndexError
     else:
         return node if index == i else get_nth(node.next, index, i + 1)
+		
