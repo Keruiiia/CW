@@ -13,3 +13,8 @@ remove("Hi! !Hi! Hi!") === "!Hi!"
 def remove(s):
     return ' '.join(word for word in s.split() if word.count('!') != 1)
 	
+
+import re
+
+def remove(s):
+    return ' '.join(filter(lambda word: len(re.findall('\!', word)) != 1, s.split(' ')))
