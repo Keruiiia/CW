@@ -44,3 +44,12 @@ The input strings are separated by , instead of \n. The ouput strings should be 
 '''
 
 
+def rot(string):
+    return string[::-1]
+
+def selfie_and_rot(string):
+    s_dot = '\n'.join([ s+'.'*len(s) for s in string.split('\n') ])   
+    return s_dot+'\n'+rot(s_dot)
+
+def oper(fct, s):
+    return fct(s)
