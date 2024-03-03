@@ -14,5 +14,4 @@ counterEffect("0000") // [[0],[0],[0],[0]]
 '''
 
 def counter_effect(hit_count):
-    # your code here
-    return [[]]
+    return [list(range(int(num) + 1)) for num in hit_count]
