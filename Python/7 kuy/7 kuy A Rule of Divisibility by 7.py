@@ -10,3 +10,10 @@ seven(1603) should return [7, 2]
 seven(477557101) should return [28, 7]
 '''
 
+def seven(m):
+    steps = 0
+    while m > 99:
+        q, r = divmod(m, 10)
+        m = q - (2 * r)
+        steps += 1
+    return m, steps
