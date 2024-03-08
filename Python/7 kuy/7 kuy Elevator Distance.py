@@ -16,3 +16,12 @@ elevatorDistance([3,3]) = 0
 Array will always contain at least 2 floors. Random tests will contain 2-20 elements in array, and floor values between 0 and 30.
 '''
 
+def elevator_distance(array):
+    res = 0
+    for i in range(1, len(array)):
+        res += abs(array[i] - array[i - 1])
+    return res
+	
+
+def elevator_distance(array):
+    return sum(abs(a - b) for a, b in zip(array, array[1:]))
