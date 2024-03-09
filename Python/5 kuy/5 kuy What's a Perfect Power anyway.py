@@ -12,3 +12,13 @@ isPP(4) => [2,2]
 isPP(9) => [3,2]
 isPP(5) => None
 '''
+
+def isPP(n):
+    for i in range(2, int(n**0.5) + 1):
+        p = 2
+        while (pow := i ** p) <= n:
+            if pow == n:
+                return [i, p]
+            p += 1
+    return None
+	
