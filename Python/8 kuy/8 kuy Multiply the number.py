@@ -8,3 +8,6 @@ each number by 5 raised to the number of digits of each numbers, so, for example
   0 -->     0  (  0 * 5¹)
  -3 -->   -15  ( -3 * 5¹)
 '''
+def multiply(n):
+    return n * 5 ** (len(str(abs(n))))
+	
