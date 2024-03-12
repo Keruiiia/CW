@@ -10,3 +10,15 @@ The sub arrays may not be the same length.
 The solution should be case insensitive (ie good, GOOD and gOOd all count as a good idea). All inputs may not be strings.
 '''
 
+def well(arr):
+    counter = 0
+    for word in sum(arr, []):
+        if type(word) == str and word.lower() == 'good':
+            counter += 1
+    if counter == 0:
+        return 'Fail!'
+    elif counter in (1, 2):
+        return 'Publish!'
+    else:
+        return 'I smell a series!'
+		
