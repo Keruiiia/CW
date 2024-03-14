@@ -7,3 +7,5 @@ Examples:
 "42", "int"  --> False
 '''
 
+def type_validation(variable, type): 
+    return variable.__class__.__name__ == type
