@@ -10,3 +10,12 @@ remove the 3 at index 3
 Expected output: [4, 6, 3]
 '''
 
+def solve(arr): 
+    res = []
+    for el in arr[::-1]:
+        if el not in res:
+            res.append(el)
+    return res[::-1]
+	
+def solve(arr): 
+    return list(dict.fromkeys(arr[::-1]))[::-1]
