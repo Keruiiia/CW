@@ -9,3 +9,7 @@ spread(someFunction, [1, true, "Foo", "bar"] )
 someFunction(1, true, "Foo", "bar")
 '''
 
+def spread(func, args):
+    return func(*args)
+	
+spread = lambda func, args: func(*args)
