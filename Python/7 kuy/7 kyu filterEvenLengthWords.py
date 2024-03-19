@@ -8,3 +8,6 @@ var output = filterEvenLengthWords(['word', 'words', 'word', 'words']);
 console.log(output); // --> ['word', 'word']
 '''
 
+def filter_even_length_words(words):
+    return [word for word in words if not(len(word) & 1)]
+	
