@@ -11,3 +11,5 @@ console.log(output); // --> ['word', 'word']
 def filter_even_length_words(words):
     return [word for word in words if not(len(word) & 1)]
 	
+def filter_even_length_words(words):
+    return [i for i in words if not len(i) % 2]
