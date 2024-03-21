@@ -12,3 +12,8 @@ Examples:
 "Keep Calm and Carry On"            --> "KCaC0"
 '''
 
+def make_password(phrase):
+    s = ''.join(word[0] for word in phrase.split())
+    t = str.maketrans('iIoOsS', '110055')
+    return s.translate(t)
+	
