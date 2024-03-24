@@ -17,4 +17,11 @@ e.g. trim("He", 1) should return "H...", because 1 <= 3
 Requested maximum length will be greater than 0. Input string will not be empty.
 '''
 def trim(phrase, size):
-    raise NotImplementedError("TODO: trim")
+    if len(phrase) <= size:
+        return phrase
+    elif size <= 3:
+        return phrase[:size] + '...'
+    else:
+        return phrase[:size-3] + '...'
+
+
