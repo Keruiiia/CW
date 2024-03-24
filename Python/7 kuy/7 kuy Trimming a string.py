@@ -25,3 +25,9 @@ def trim(phrase, size):
         return phrase[:size-3] + '...'
 
 
+def trim(phrase, size):
+    
+    if len(phrase) > size:
+        return phrase[:size if size<3 else size-3] + '...'
+    else:
+        return phrase
