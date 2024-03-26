@@ -4,3 +4,10 @@ Sort the given array of strings in alphabetical order, case insensitive. For exa
 ["Hello", "there", "I'm", "fine"]  -->  ["fine", "Hello", "I'm", "there"]
 ["C", "d", "a", "B"])              -->  ["a", "B", "C", "d"]
 '''
+
+def sortme(words):
+    return sorted(words, key=lambda word: word.lower())
+	
+	
+def sortme(words):
+    return sorted(words, key=str.lower)
