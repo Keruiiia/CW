@@ -11,3 +11,8 @@ Here is an example of your return
 [3.6, "udiwstagwo"]
 '''
 
+def mean(lst):
+    return [sum(int(num) for num in lst if num.isdigit()) / 10,
+            ''.join(char for char in lst if char.isalpha())]
+			
+
